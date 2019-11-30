@@ -19,11 +19,11 @@ $ sh run_ende.sh
 Inference the test set.
 
 ```
-python generate.py $DATA --path $SMODEL \
+$ python generate.py $DATA --path $SMODEL \
     --gen-subset test --beam 4 --batch-size 128 \
     --remove-bpe --lenpen 0.6 > pred.de \
 # because fairseq's output is unordered, we need to recover its order
-grep ^H pred.de | cut -f1,3- | cut -c3- | sort -k1n | cut -f2- > pred.de
+$ grep ^H pred.de | cut -f1,3- | cut -c3- | sort -k1n | cut -f2- > pred.de
 ```
 
 ## Citation
