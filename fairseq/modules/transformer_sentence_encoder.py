@@ -219,7 +219,7 @@ class TransformerSentenceEncoder(nn.Module):
         tokens_decoder = torch.cat((2*torch.ones([1, tokens_decoder.size(1)]).cuda(), tokens_decoder.float()), 0).transpose(0,1).long()
         x_dec, sen_rep_dec, _ = self.lm_features(tokens_decoder, attn_mask, segment_labels, padding_mask, hadpadding=False)
         x_dec = x_dec[-1]
-        x_mixed2 = torch.cat((x_forword[-1], x_dec), -1)
+        x_mixed2 = torch.cat((x_dec, x_rev), -1)
         x = self.linear1(x_mixed2)
 
         residual = x
