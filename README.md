@@ -29,14 +29,11 @@ $ grep ^H pred.de | cut -f1,3- | cut -c3- | sort -k1n | cut -f2- > pred.de
 ## Citation
 If you find the resources in this repository useful, please consider citing:
 
->@article{feng2019modeling,
-
->  title={Modeling Fluency and Faithfulness for Diverse Neural Machine Translation},
-
->  author={Feng, Yang and Xie, Wanying and Gu, Shuhao and Shao, Chenze and Zhang, Wen and Yang, Zhengxin and Yu, Dong},
-
->  journal={arXiv preprint arXiv:1912.00178},
-
->  year={2019}
-
->}
+```
+@article{feng2019modeling,
+  title={Modeling Fluency and Faithfulness for Diverse Neural Machine Translation},
+  author={Feng, Yang and Xie, Wanying and Gu, Shuhao and Shao, Chenze and Zhang, Wen and Yang, Zhengxin and Yu, Dong},
+  journal={arXiv preprint arXiv:1912.00178},
+  year={2019}
+}
+```
